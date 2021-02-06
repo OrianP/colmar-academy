@@ -7,8 +7,9 @@
   <link type="text/css" rel="stylesheet" href="./resources/css/reset.css">
   <title>Colmar Academy</title>
 </head>
-<body class="grid">
-  <nav>
+
+<body>
+  <nav class="mobile">
       <a>
           <img src="./resources/images/ic-logo.svg" alt="Logo">
       </a>
@@ -19,37 +20,70 @@
         <img src="./resources/images/ic-online.svg" alt="Online">
     </a>
     <a>
-        <img src="./resources/images/ic-login.svg" alt="login">
+        <img src="./resources/images/ic-login.svg" alt="Login">
     </a>
+  </nav>
+
+  <nav class="desktop flex">
+      <div class="colmar-logo flex">
+           <img src="./resources/images/ic-logo.svg" alt="Logo">
+           <span class="logo-all-caps">colmar academy</span>
+      </div>
+      <div class="nav-items flex">
+          <a><h3>On campus</h3></a>
+          <a><h3>Online</h3></a>
+          <a><h3>For companies</h3></a>
+          <a><h3>Sign in</h3></a>
+      </div>
   </nav>  
+
   <header>
       <img src="./resources/images/banner.jpg" alt="Students working at picnic table">
       <h1>Learn something new everyday</h1>
       <p>Explore a variety of courses, build your skill set and prepare to enter the workforce: all this and more at Colmar Academy.</p>
       <a class="cta"><p>Start here</p></a>
   </header>
+
   <main>
-        <div class="info">
-            <div class="orientation">
-                <img src="./resources/images/information-orientation-mobile.jpg" alt="Students walking on footpath">
-                <h2>Orientation date</h2>
-                <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-                <a class="read-more"><p>Read more</p></a>
+        <div class="info flex">
+            <div class="desktop quote-section">
+                <img src="./resources/images/information-main.jpg" alt="Man reading book">
+                <h1>Practice makes progress</h1>
+                <p class="info-main-quote">"Cement your new-found knowledge with repitition, and you will always be ahead of the competition"</p>
+                <p class="info-main-credit">Emanuel, Sr Strategist at Hiring.com </p>
             </div>
-            <div class="campus">
-                <img src="./resources/images/information-campus-mobile.jpg" alt="Students on campus">
-                <h2>Our campus</h2>
-                <p>Find which campus is close to you</p>
-                <a class="read-more"><p>Read more</p></a>
-            </div>
-            <div class="lecture">
-                <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="Guest lecturer">
-                <h2>Special guest lecture</h2>
-                <p>Join a keynote with Oliver Sack about music in meducal treatment</p>
-                <a class="read-more"><p>Read more</p></a>
+            <div class="sidebar flex">                
+                <div class="orientation flex">
+                    <picture>
+                        <source srcset="./resources/images/information-orientation.jpg" media="(min-width: 600px)">
+                        <img src="./resources/images/information-orientation-mobile.jpg" alt="Students walking on footpath">
+                    </picture>
+                    <h2>Orientation date</h2>
+                    <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                    <a class="read-more"><p>Read more</p></a>
+                </div>
+                <div class="campus flex">
+                    <picture>
+                        <source srcset="./resources/images/information-campus.jpg" media="(min-width: 600px)">
+                        <img src="./resources/images/information-campus-mobile.jpg" alt="Students on campus">
+                    </picture>
+                    <h2>Our campus</h2>
+                    <p>Find which campus is close to you</p>
+                    <a class="read-more"><p>Read more</p></a>
+                </div>
+                <div class="lecture flex">
+                    <picture>
+                        <source srcset="./resources/images/information-guest-lecture.jpg" media="(min-width: 600px)">
+                        <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="Guest lecturer">
+                    </picture>
+                    <h2>Special guest lecture</h2>
+                    <p>Join a keynote with Oliver Sack about music in meducal treatment</p>
+                    <a class="read-more"><p>Read more</p></a>
+                </div>
             </div>
         </div>
-        <div class="courses">
+
+        <div class="mobile courses">
             <h1>Start learning</h1>
             <a class="course-name"><h3>Software engineering</h3></a>
             <a class="course-name"><h3>Computer art</h3></a>
@@ -58,13 +92,16 @@
             <a class="course-name"><h3>Business</h3></a>
             <a class="course-name"><h3>Marketing</h3></a>
         </div>
+
         <div class="thesis">
             <h1>Thesis exhibits</h1>
             <video controls src="./resources/videos/thesis.mp4" type="video/mp4"></video>
         </div> 
   </main>
+
   <footer>
       <p>© Colmar Academy. All rights reserved</p>
   </footer>
+
 </body>
 </html>

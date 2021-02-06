@@ -1,0 +1,29 @@
+
+nav.mobile {
+    display: none;
+}
+
+nav.desktop {
+    display: flex;
+    justify-content: space-between;
+    height: 4rem;
+}
+
+div.colmar-logo {
+    display: flex;
+    justify-content: space space-between;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+div.nav-items {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-right: 1.5rem;
+}
+
+.nav-items a {
+    margin-left: 1rem;
+}
+
