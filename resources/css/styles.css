@@ -1,23 +1,30 @@
+/* Global Styles */
+body {
+    overflow-x: hidden;
+}
+
+div.flex, nav.flex, header.flex {
+    display: flex;
+}
+
+/* Navbar */
 
 nav.mobile {
     display: none;
 }
 
 nav.desktop {
-    display: flex;
     justify-content: space-between;
     height: 4rem;
 }
 
 div.colmar-logo {
-    display: flex;
-    justify-content: space space-between;
+    justify-content: space-between;
     align-items: center;
     margin-left: 1.5rem;
 }
 
 div.nav-items {
-    display: flex;
     justify-content: start;
     align-items: center;
     margin-right: 1.5rem;
@@ -27,3 +34,97 @@ div.nav-items {
     margin-left: 1rem;
 }
 
+/* Header */
+
+
+header.flex {
+    width: 100%;
+    background-color: lightblue;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+
+div.header-content {
+    flex-flow: column;
+    width: 40%;
+    border: 2px solid red;
+    
+}
+
+div.header-content > * {
+    width: 80%;
+}
+
+a.cta {
+    padding: 0.5rem;
+    background-color: grey;
+    text-align: center;
+    
+}
+
+div.image-container {
+    width: 60%;
+    overflow: hidden;
+    border: 2px solid red;
+    margin: 2rem 1.5rem;
+}
+ 
+div.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+/*
+main div.info {
+    width: 100%;
+}
+
+div.info div.quote-section {
+    width: 60%;
+    flex-flow: column;
+}
+
+div.quote-image-container {
+    width: 100%;
+    overflow: hidden;
+    border: 2px solid red;
+    margin: 2rem 1.5rem;
+}
+
+
+*/
+div.sidebar {
+    width: 35%;
+    flex-flow: column;
+}
+
+main {
+    width: 100%;
+}
+
+div.info {
+    background-color: blueviolet;   
+}
+
+div.quote-section {
+    flex-flow: column;
+    border: 2px solid blue;
+    width: 60%;
+    overflow: hidden;
+    
+
+}
+
+div.quote-image-container {
+    border: 2px solid red;
+    margin: 2rem 1.5rem;
+}
+
+div.quote-image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
