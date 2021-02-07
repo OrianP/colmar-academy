@@ -1,9 +1,10 @@
 /* Global Styles */
 body {
     overflow-x: hidden;
+    box-sizing: border-box;
 }
 
-div.flex, nav.flex, header.flex {
+div.flex, nav.flex {
     display: flex;
 }
 
@@ -16,6 +17,7 @@ nav.mobile {
 nav.desktop {
     justify-content: space-between;
     height: 4rem;
+    border-bottom: 1px black solid;
 }
 
 div.colmar-logo {
@@ -34,7 +36,73 @@ div.nav-items {
     margin-left: 1rem;
 }
 
-/* Header */
+/* Grid */
+
+div.header-content, div.info, div.sidebar {
+    flex-direction: column;
+}
+
+div.header-text {
+    height: 60%;
+    position: relative;
+    top: 15rem;
+    
+}
+
+div.grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row: auto;
+    align-items: center;
+}
+
+div.info {
+    align-self: start; 
+}
+
+div.header-content, div.grid > div.image-container {
+    background-color: lightblue;
+}
+
+div.header-content {
+    height: 100%;
+}
+
+/* Images */
+
+div.image-container {
+    overflow: hidden;
+    padding: 2rem 1.5rem;
+}
+ 
+div.image-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+picture.sidebar-image {
+    width: 35%;
+    overflow: hidden;
+}
+
+picture.sidebar-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+/* sidebar */
+div.sidebar {
+    margin-top: 2rem;
+}
+
+div.sidebar-text {
+    width: 65%;
+}
+
+/* Header 
 
 
 header.flex {
@@ -76,28 +144,10 @@ div.image-container img {
     display: block;
 
 }
-/*
-main div.info {
-    width: 100%;
-}
 
-div.info div.quote-section {
-    width: 60%;
-    flex-flow: column;
-}
-
-div.quote-image-container {
-    width: 100%;
-    overflow: hidden;
-    border: 2px solid red;
-    margin: 2rem 1.5rem;
-}
-
-
-*/
 div.sidebar {
-    width: 35%;
     flex-flow: column;
+    width: 20%;
 }
 
 main {
@@ -119,7 +169,8 @@ div.quote-section {
 
 div.quote-image-container {
     border: 2px solid red;
-    margin: 2rem 1.5rem;
+    margin: 2rem 1rem;
+    width: 100%;
 }
 
 div.quote-image-container img {
@@ -128,3 +179,4 @@ div.quote-image-container img {
     display: block;
 
 }
+*/
