@@ -58,12 +58,13 @@ div.header-info-grid {
     display: grid;
     grid-template-columns: 60% 40%;
     grid-row: auto;
-    align-items: center;
 }
 
+/* Don't know if this is doing anything 
 div.info {
-    align-self: start; 
+    /*align-self: start; 
 }
+*/
 
 div.info-text {
     padding-left: 1.5rem;
@@ -74,7 +75,7 @@ div.info-text > * {
 }
 
 div.header-content, div.header-info-grid > div.image-container {
-    background-color: lightblue;
+    background-color: lightgrey;
 }
 
 div.header-content {
@@ -85,7 +86,7 @@ div.header-content {
 
 div.sidebar {
     padding: 2rem 0;
-    border-left: 0.5px solid grey;
+    border-left: 0.5px solid lightgrey;
 }
 
 div.sidebar-text {
@@ -97,20 +98,21 @@ div.sidebar > * {
     margin-bottom: 1rem;
 }
 
-/* Courses Grid */
+/* Courses flex and grid */
 
 div.mobile-courses {
     display: none;
 }
 
-div.desktop-courses {
+div.desktop-courses, div.thesis {
     width: 100%;
-    background-color: grey;
+    background-color: lightgrey;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 4rem;
 }
 
-div.desktop-courses h1 {
+h1.section-title {
     padding: 2rem 0;
 }
 
@@ -120,37 +122,48 @@ div.courses-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    background-color: honeydew;
+    background-color: lightgrey;
 }
 
 div.courses-grid > div.flex {
     flex-direction: column;
-    background-color: cyan;
+    background-color: white;
 }
 
 div.course-text {
     padding: 1rem 1rem 2rem;
 }
+
+/* Thesis flex and grid */ 
+/* div.thesis flex rules already defined in Courses section */
+
+body div.thesis {
+    background-color: white;
+}
+
+div.no-border {
+    border-left: none;
+}
+
 /* All Images */
 
-div.image-container {
+div.image-container, div.video-container {
     overflow: hidden;
 }
 
-div.image-container img {
+div.image-container img, div.video-container video {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
- div.header-info-grid > div.image-container, div.info > div.image-container {
+ div.header-info-grid > div.image-container, div.info > div.image-container, div.video-container {
     padding: 2rem 1.5rem;
  }
  
 picture.sidebar-image {
     width: 35%;
     overflow: hidden;
-    /*padding-bottom: 1rem;*/
 }
 
 picture.sidebar-image img {
@@ -159,85 +172,15 @@ picture.sidebar-image img {
     display: block;
 }
 
+/* Media Query for mobile */
 
+@media only screen and (max-width: 600px) {
 
+    div.desktop, div.desktop-courses, nav.desktop {
+        display: none;
+    }
 
-
-/* Header 
-
-
-header.flex {
-    width: 100%;
-    background-color: lightblue;
-    align-items: center;
-    padding: 1.5rem;
+    div.header-info-grid {
+        grid-template-columns: 1fr;
+    }
 }
-
-
-div.header-content {
-    flex-flow: column;
-    width: 40%;
-    border: 2px solid red;
-    
-}
-
-div.header-content > * {
-    width: 80%;
-}
-
-a.cta {
-    padding: 0.5rem;
-    background-color: grey;
-    text-align: center;
-    
-}
-
-div.image-container {
-    width: 60%;
-    overflow: hidden;
-    border: 2px solid red;
-    margin: 2rem 1.5rem;
-}
- 
-div.image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-
-}
-
-div.sidebar {
-    flex-flow: column;
-    width: 20%;
-}
-
-main {
-    width: 100%;
-}
-
-div.info {
-    background-color: blueviolet;   
-}
-
-div.quote-section {
-    flex-flow: column;
-    border: 2px solid blue;
-    width: 60%;
-    overflow: hidden;
-    
-
-}
-
-div.quote-image-container {
-    border: 2px solid red;
-    margin: 2rem 1rem;
-    width: 100%;
-}
-
-div.quote-image-container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-
-}
-*/
