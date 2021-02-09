@@ -183,4 +183,49 @@ picture.sidebar-image img {
     div.header-info-grid {
         grid-template-columns: 1fr;
     }
+
+    nav.mobile {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 4rem;
+    }
+
+    div.mobile-courses {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    a.course-name {
+        width: 80%;
+        padding: 2rem 1rem;
+        background-color: lightgrey;
+        margin-bottom: 0.5rem;
+    }
+
+    
+    div.sidebar > * {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        
+        
+    }
+
+    div.sidebar div.flex > * {
+        width: 100%;
+        padding-bottom: 1rem;
+        
+    }
+
+    div.sidebar {
+        padding: 1rem;
+    }
+
+    div.header-info-grid > div.image-container, div.video-container {
+        padding: 0rem;
+    }
+    
 }
