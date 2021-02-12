@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
   <link type="text/css" rel="stylesheet" href="./resources/css/reset.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
   <title>Colmar Academy</title>
 </head>
 
@@ -25,15 +27,15 @@
     </nav>
 
     <nav class="desktop flex">
-      <div class="colmar-logo flex">
-           <img src="./resources/images/ic-logo.svg" alt="Logo">
-           <span class="logo-all-caps">colmar academy</span>
-      </div>
+      <a href="#" class="colmar-logo flex">
+           <img src="./resources/images/ic-logo.svg" alt="Lion logo">
+           <img src="./resources/images/colmar-academy-logo.png" alt="Colmar Academy Logo">
+      </a>
       <div class="nav-items flex">
-          <a><h3>On campus</h3></a>
-          <a><h3>Online</h3></a>
-          <a><h3>For companies</h3></a>
-          <a><h3>Sign in</h3></a>
+          <a href="#"><h3>On campus</h3></a>
+          <a href="#"><h3>Online</h3></a>
+          <a href="#"><h3>For companies</h3></a>
+          <a href="#"><h3>Sign in</h3></a>
       </div>
     </nav>  
     <div class="grid">
@@ -43,7 +45,7 @@
     </div>
     <div class="header-content flex">
         <div class="header-text flex">
-      <h1>Learn something new everyday</h1>
+      <h1 class="section-title">Learn something new everyday</h1>
       <p>Explore a variety of courses, build your skill set and prepare to enter the workforce: all this and more at Colmar Academy.</p>
       <a class="cta"><p>Start here</p></a>
         </div>
@@ -174,7 +176,7 @@
     </div>
 
     <div class="thesis flex">
-        <h1 class="section-title">Thesis exhibits</h1>
+        <h1 class="section-title blue">Thesis exhibits</h1>
         <div class="grid">
             <div class="video-container">
                 <video controls src="./resources/videos/thesis.mp4" type="video/mp4"></video>
