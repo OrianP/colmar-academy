@@ -62,6 +62,7 @@ a h3 {
 
 div.header-text, div.info, div.sidebar {
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 div.header-content {
@@ -70,7 +71,6 @@ div.header-content {
 
 div.header-text {
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
     font-weight: 300;
     line-height: 1.2;
 }
@@ -100,18 +100,60 @@ div.header-content {
 /* Sidebar */
 
 div.sidebar {
-    padding: 2rem 0;
     border-left: 0.5px solid lightgrey;
+}
+
+div.sidebar > * {
+    padding: 1rem 1rem;
+    border-bottom: 0.5px solid lightgrey;
+}
+
+div.sidebar div.orientation {
+    padding-top: 2rem;
+}
+div.lecture {
+    padding-bottom: 2rem;
+    border-bottom: none;
 }
 
 div.sidebar-text {
     width: 65%;
-    
+    line-height: 1.5; 
+    padding-left: 1rem; 
+    position: relative;
 }
 
-div.sidebar > * {
-    margin-bottom: 1rem;
+div.sidebar-text h2 {
+    font-size: 1.2rem;
 }
+
+div.sidebar-text p, div.sidebar-text a {
+    font-weight: 300;
+}
+
+div.sidebar-text a.read-more {
+    position: absolute;
+    bottom: 0;
+    line-height: 1;
+    font-size: 0.9rem;
+    color: black;
+    text-transform: uppercase;
+}
+
+div.sidebar:hover > div {
+    opacity: 0.5;
+    background-color: rgb(237, 242, 250);
+}
+
+div.sidebar:hover > div:hover {
+    opacity: 1;
+    background-color: rgb(224, 234, 250);
+}
+
+div.sidebar:hover > div:hover a.read-more {
+    color: rgb(49, 71, 110);
+}
+
 
 /* Courses layout with flex and grid */
 
@@ -121,19 +163,20 @@ div.mobile-courses {
 
 div.desktop-courses, div.thesis {
     width: 100%;
-    background-color: lightgrey;
+    background-color: rgb(33, 47, 73);    
     flex-direction: column;
     align-items: center;
     padding-bottom: 4rem;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1.section-title {
     padding: 1.5rem 0;
     font-weight: 400;
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: whitesmoke;
-    font-family:'Roboto', sans-serif;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
 }
 
 h1.section-title.blue{
@@ -146,7 +189,7 @@ div.courses-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 2rem;
-    background-color: lightgrey;
+    background-color: rgb(33, 47, 73);    
 }
 
 div.courses-grid > div.flex {
@@ -155,8 +198,28 @@ div.courses-grid > div.flex {
 }
 
 div.course-text {
-    padding: 1rem 1rem 2rem;
+    padding: 1rem 1rem 1rem;
 }
+div.course-text a.course-name h3 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+div.course-text h4 {
+    font-size: 0.8rem;
+}
+div.course-text h5 {
+    padding: 1rem 0;
+    font-weight: 300;
+}
+
+div.courses-grid:hover > div {
+    opacity: 0.7;
+}
+
+div.courses-grid:hover > div:hover {
+    opacity: 1;
+}
+
 
 /* Thesis layout with flex and grid */ 
 /* div.thesis flex rules already defined in Courses section */
@@ -167,6 +230,11 @@ body div.thesis {
 
 div.no-border {
     border-left: none;
+    margin-top: 2rem;
+}
+
+div.sidebar div.article-1 {
+    border-top: 0.5px solid lightgrey;
 }
 
 /* Footer */
@@ -175,7 +243,11 @@ footer.flex {
     justify-content: space-between;
     align-items: center;
     height: 4rem;
-    background-color: lightgrey;
+    background-color: rgb(27, 27, 51);    
+    font-family: 'Roboto', sans-serif;
+    color: whitesmoke;
+    font-weight: 300;
+    font-size: 0.9rem;
 }
 
 footer p {
@@ -188,6 +260,11 @@ footer div {
 
 footer div a {
     padding-right: 0.5rem;
+    color: whitesmoke;
+}
+
+footer div a:hover {
+    opacity: 0.5;
 }
 
 /* Desktop Images and Video */
@@ -241,6 +318,7 @@ picture.sidebar-image img {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        background-color: rgb(33, 47, 73);  
     }
 
     a.course-name {
