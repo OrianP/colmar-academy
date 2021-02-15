@@ -75,6 +75,37 @@ div.header-text {
     line-height: 1.2;
 }
 
+div.cta-container {
+    padding: 1rem 0.5rem;
+    width: 85%;
+    background-color: whitesmoke;
+    opacity: 0.7;
+    border-radius: 2px;
+}
+
+div.cta-container p.one-liner {
+    margin-bottom: 1.5rem;
+}
+
+div.cta-container div.cta-blue {
+    background-color:rgb(33, 47, 73);
+    width: max-content;
+    padding: 0.7rem 3rem;
+    border-radius: 3px;
+    opacity: initial;
+}
+
+div.cta-blue a.cta p {
+    color: whitesmoke;
+    opacity: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;    
+}
+ /* put a tag around cta-blue to nake the whole button clickable */
+a.cta:hover {
+    opacity: initial;
+}
+
 div.grid {
     display: grid;
     grid-template-columns: 60% 40%;
@@ -87,6 +118,23 @@ div.info-text {
 
 div.info-text > * {
     line-height: 2rem;
+}
+
+div.info-text h1 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color:rgb(27, 27, 51);
+}
+
+.info-main-quote {
+    padding-top: 0.5rem;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.info-main-credit {
+    font-size: 0.8rem;
+    padding-top: 1.5rem;
 }
 
 div.header-content, div.grid > div.image-container {
