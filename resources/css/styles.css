@@ -79,31 +79,34 @@ div.cta-container {
     padding: 1rem 0.5rem;
     width: 85%;
     background-color: whitesmoke;
-    opacity: 0.7;
     border-radius: 2px;
+    opacity: 0.8;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
 div.cta-container p.one-liner {
     margin-bottom: 1.5rem;
+    color: rgb(33, 47, 73);
+    line-height: 1.4;
 }
 
-div.cta-container div.cta-blue {
-    background-color:rgb(33, 47, 73);
+div.cta-container  a div.cta-blue {
+    background-color:rgb(26, 38, 59);
     width: max-content;
     padding: 0.7rem 3rem;
     border-radius: 3px;
-    opacity: initial;
+    box-shadow: 0 6px 6px -6px rgb(26, 38, 59);
 }
 
-div.cta-blue a.cta p {
+a div.cta-blue p {
     color: whitesmoke;
-    opacity: 1;
-    text-transform: uppercase;
-    letter-spacing: 0.7px;    
-}
- /* put a tag around cta-blue to nake the whole button clickable */
-a.cta:hover {
     opacity: initial;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;  
+}
+
+a.cta div.cta-blue:hover {
+    background-color:rgb(69, 88, 122);  
 }
 
 div.grid {
@@ -130,6 +133,7 @@ div.info-text h1 {
     padding-top: 0.5rem;
     font-weight: 300;
     font-style: italic;
+    
 }
 
 .info-main-credit {
@@ -219,16 +223,18 @@ div.desktop-courses, div.thesis {
 }
 
 h1.section-title {
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     font-weight: 400;
     font-size: 2rem;
     color: whitesmoke;
     letter-spacing: 1.2px;
     text-transform: uppercase;
+    font-family:'Roboto', sans-serif;
 }
 
 h1.section-title.blue{
-    color:rgb(33, 47, 73)
+    color:rgb(33, 47, 73);
+    padding-bottom: 0;
 } 
 
 div.courses-grid {
@@ -268,12 +274,20 @@ div.courses-grid:hover > div:hover {
     opacity: 1;
 }
 
+div.shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+}
+
 
 /* Thesis layout with flex and grid */ 
 /* div.thesis flex rules already defined in Courses section */
 
 body div.thesis {
     background-color: white;
+}
+
+div.thesis {
+    padding-bottom: 2.5rem;
 }
 
 div.no-border {
@@ -285,13 +299,18 @@ div.sidebar div.article-1 {
     border-top: 0.5px solid lightgrey;
 }
 
+div.info-text p.info-main-quote.thesis-quote {
+    line-height: 1.5rem;
+    width: 95%;
+}
+
 /* Footer */
 
 footer.flex {
     justify-content: space-between;
     align-items: center;
     height: 4rem;
-    background-color: rgb(27, 27, 51);    
+    background-color: rgb(33, 47, 73);     
     font-family: 'Roboto', sans-serif;
     color: whitesmoke;
     font-weight: 300;
@@ -319,6 +338,12 @@ footer div a:hover {
 
 div.image-container, div.video-container {
     overflow: hidden;
+    
+}
+
+img.image-shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    
 }
 
 div.image-container img, div.video-container video {
@@ -361,12 +386,53 @@ picture.sidebar-image img {
         height: 4rem;
     }
 
+    nav.mobile a:hover {
+        opacity: 0.5;
+    }
+
+    div.header-content {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    div.header-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    div.header-text h1 {
+        width: 90%;
+    }
+
+    div.cta-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.sidebar > * {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;    
+    }
+
+    div.sidebar div.flex > * {
+        width: 100%;
+        padding-bottom: 1rem;    
+    }
+
+    div.sidebar {
+        padding: 0;
+    }
+
     div.mobile-courses {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
         background-color: rgb(33, 47, 73);  
+        padding-bottom: 4rem;
     }
 
     a.course-name {
@@ -376,23 +442,16 @@ picture.sidebar-image img {
         margin-bottom: 0.5rem;
     }
 
-    
-    div.sidebar > * {
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        
-        
+    a.course-name:hover {
+        background-color: whitesmoke;
     }
 
-    div.sidebar div.flex > * {
-        width: 100%;
-        padding-bottom: 1rem;
-        
+    div.thesis {
+        padding-bottom: 0;
     }
 
-    div.sidebar {
-        padding: 1rem;
+    h1.section-title.blue {
+        padding: 1.5rem 0;
     }
 
     div.grid > div.image-container, div.video-container {
@@ -405,8 +464,5 @@ picture.sidebar-image img {
 
     footer.flex {
         justify-content: center;
-    }
-
-    /* blue color #04044B, #020226 */
-    
+    }    
 }
