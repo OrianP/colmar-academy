@@ -11,55 +11,57 @@
 </head>
 
 <body>
-    <nav class="mobile">
-      <a>
+    <nav class="nav-mobile">
+      <a class="nav-mobile__item">
           <img src="./resources/images/ic-logo.svg" alt="Logo">
       </a>
-      <a>
+      <a class="nav-mobile__item">
           <img src="./resources/images/ic-on-campus.svg" alt="On Campus">
       </a>
-      <a>
+      <a class="nav-mobile__item">
         <img src="./resources/images/ic-online.svg" alt="Online">
     </a>
-    <a>
+    <a class="nav-mobile__item">
         <img src="./resources/images/ic-login.svg" alt="Login">
     </a>
     </nav>
 
-    <nav class="desktop flex">
+    <nav class="nav-desktop flex">
       <a href="#" class="colmar-logo flex">
            <img src="./resources/images/ic-logo.svg" alt="Lion logo">
            <img src="./resources/images/colmar-academy-logo.png" alt="Colmar Academy Logo">
       </a>
       <div class="nav-items flex">
-          <a href="#"><h3>On campus</h3></a>
-          <a href="#"><h3>Online</h3></a>
-          <a href="#"><h3>For companies</h3></a>
-          <a href="#"><h3>Sign in</h3></a>
+          <a href="#" class="nav-items__item"><h3>On campus</h3></a>
+          <a href="#" class="nav-items__item"><h3>Online</h3></a>
+          <a href="#" class="nav-items__item"><h3>For companies</h3></a>
+          <a href="#" class="nav-items__item"><h3>Sign in</h3></a>
       </div>
     </nav>  
     <div class="grid">
   
-    <div class="image-container">
-      <img class="image-shadow" src="./resources/images/banner.jpg" alt="Students working at picnic table">
+    <div class="media-container media-container--blue">
+      <img class="media-container__img media-container__image--shadow image-shadow" 
+      src="./resources/images/banner.jpg" alt="Students working at picnic table">
     </div>
     <div class="header-content flex">
-        <div class="header-text flex">
+        <div class="header-text flex column">
             <h1 class="section-title">Learn something new everyday.</h1>
             <div class="cta-container">
-                <p class="one-liner">Explore a variety of courses, build your skill set and prepare to enter the workforce: all this and more at Colmar Academy.</p>
-                <a href="#courses" class="cta" >
-                    <div class="cta-blue">
-                        <p>Start here</p>
-                    </div>
+                <p class="cta-container__text">Explore a variety of courses, build your skill set and prepare to enter the workforce: all this and more at Colmar Academy.</p>
+                <a href="#courses">
+                    <div class="cta-container__button">
+                        <p>Start here</p>  
+                    </div> 
                 </a>
             </div>
         </div>
     </div>
 
-    <div class="info flex desktop">
-        <div class="image-container">
-            <img src="./resources/images/information-main.jpg" alt="Man reading book">
+    <div class="info flex column desktop">
+        <div class="media-container">
+            <img class="media-container__img"
+            src="./resources/images/information-main.jpg" alt="Man reading book">
         </div>
         <div class="info-text">
             <h1>Practice makes progress.</h1>
@@ -67,7 +69,7 @@
             <p class="info-main-credit">Emanuel, Sr Strategist at Hiring.com </p>
         </div>
     </div>
-    <div class="sidebar flex">                
+    <div class="sidebar flex column">                
                 <div class="orientation flex">
                     <picture class="sidebar-image">
                         <source srcset="./resources/images/information-orientation.jpg" media="(min-width: 600px)">
@@ -114,12 +116,13 @@
             <a class="course-name"><h3>Marketing</h3></a>
     </div>
 
-    <div class="desktop-courses flex" id="courses">
+    <div class="desktop-courses flex column" id="courses">
         <h1 class="section-title">Start Learning</h1>
         <div class="courses-grid">
-            <div class="course-1 flex shadow">
-                <div class="image-container">
-                    <img src="./resources/images/course-software.jpg" alt="mac computer screens">
+            <div class="courses-grid__course flex column">
+                <div class="media-container media-container--no-padding">
+                    <img class="media-container__img"
+                    src="./resources/images/course-software.jpg" alt="mac computer screens">
                 </div>
                 <div class="course-text">
                     <a class="course-name"><h3>Software engineering</h3></a>
@@ -127,9 +130,10 @@
                     <h5>Web Development, Mobile Development, iOT, APIs</h5>
                 </div>
             </div>
-            <div class="course-2 flex shadow">
-                <div class="image-container">
-                    <img src="./resources/images/course-computer-art.jpg" alt="Looking at iphone screen">
+            <div class="courses-grid__course flex column">
+                <div class="media-container media-container--no-padding">
+                    <img class="media-container__img"
+                    src="./resources/images/course-computer-art.jpg" alt="Looking at iphone screen">
                 </div>
                 <div class="course-text">
                     <a class="course-name"><h3>Computer Art</h3></a>
@@ -137,9 +141,10 @@
                     <h5>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</h5>
                 </div>
             </div>
-            <div class="course-3 flex shadow">
-                <div class="image-container">
-                    <img src="./resources/images/course-design.jpg" alt="Person holding camera">
+            <div class="courses-grid__course flex column">
+                <div class="media-container media-container--no-padding">
+                    <img class="media-container__img"
+                    src="./resources/images/course-design.jpg" alt="Person holding camera">
                 </div>
                 <div class="course-text">
                     <a class="course-name"><h3>Design</h3></a>
@@ -147,9 +152,10 @@
                     <h5>User Experience Design, User Research, Visual Design</h5>
                 </div>
             </div>
-            <div class="course-4 flex shadow">
-                <div class="image-container">
-                    <img src="./resources/images/course-data.jpg" alt="Computer screen showing analytics">
+            <div class="courses-grid__course flex column">
+                <div class="media-container media-container--no-padding">
+                    <img class="media-container__img"
+                    src="./resources/images/course-data.jpg" alt="Computer screen showing analytics">
                 </div>
                 <div class="course-text">
                     <a class="course-name"><h3>Data</h3></a>
@@ -157,9 +163,10 @@
                     <h5>Data Science, Big Data, SQL, Data Visualization</h5>
                 </div>
             </div>
-            <div class="course-5 flex shadow">
-                <div class="image-container">
-                    <img src="./resources/images/course-business.jpg" alt="Chess board">
+            <div class="courses-grid__course flex column">
+                <div class="media-container media-container--no-padding">
+                    <img class="media-container__img"
+                    src="./resources/images/course-business.jpg" alt="Chess board">
                 </div>
                 <div class="course-text">
                     <a class="course-name"><h3>Business</h3></a>
@@ -167,9 +174,10 @@
                     <h5>Product Development, Business Development, Startup</h5>
                 </div>
             </div>
-            <div class="course-6 flex shadow">
-                <div class="image-container">
-                    <img src="./resources/images/course-marketing.jpg" alt="Apple watch on man's wrist">
+            <div class="courses-grid__course flex column">
+                <div class="media-container media-container--no-padding">
+                    <img class="media-container__img"
+                    src="./resources/images/course-marketing.jpg" alt="Apple watch on man's wrist">
                 </div>
                 <div class="course-text">
                     <a class="course-name"><h3>Marketing</h3></a>
@@ -181,13 +189,14 @@
         </div>
     </div>
 
-    <div class="thesis flex">
+    <div class="thesis flex column">
         <h1 class="section-title blue">Thesis Exhibits</h1>
         <div class="grid">
-            <div class="video-container">
-                <video controls src="./resources/videos/thesis.mp4" type="video/mp4"></video>
+            <div class="media-container">
+                <video class="media-container__vid"
+                controls src="./resources/videos/thesis.mp4" type="video/mp4"></video>
             </div>
-            <div class="sidebar flex no-border desktop">
+            <div class="sidebar flex column no-border desktop">
                 <div class="article-1 flex">
                         <picture class="sidebar-image">
                             <img src="./resources/images/thesis-fisma.jpg" alt="Hand sketching with marker">

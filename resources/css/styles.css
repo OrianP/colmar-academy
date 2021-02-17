@@ -1,46 +1,27 @@
 /* Global Styles */
 body {
     overflow-x: hidden;
-    box-sizing: border-box;
-    
+    box-sizing: border-box;  
 }
 
-div.flex, nav.flex, footer.flex {
+/* Layout */
+
+.flex {
     display: flex;
 }
 
-/* Navbar */
-
-nav.mobile {
-    display: none;
+.flex.column {
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
-nav.desktop {
-    justify-content: space-between;
-    height: 4rem;
-    background-color: white;
+.grid {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-row: auto;
 }
 
-a.colmar-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1.5rem;
-}
-/* change this to have the logo grow instead of BG color*/
-a.colmar-logo:hover {
-    background-color: rgb(138, 155, 185);
-}
-
-div.nav-items {
-    justify-content: start;
-    align-items: center;
-}
-
-.nav-items a {
-    padding: 1.562rem 1.2rem;
-    
-}
+ /* Text */
 
 a h3 {
     font-family: 'Roboto', sans-serif;
@@ -50,32 +31,65 @@ a h3 {
     font-size: 15px;
 }
 
-.nav-items a:hover {
-    background-color: rgb(33, 47, 73);    
+/* Section specific styles */
+
+/* Navbar */
+
+.nav-mobile {
+    display: none;
 }
 
-.nav-items a:hover h3 {
+.nav-desktop {
+    justify-content: space-between;
+    height: 4rem;
+    background-color: white;
+}
+
+.colmar-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+}
+/* change this to a different animation*/
+.colmar-logo:hover {
+    background-color: rgb(138, 155, 185);
+}
+
+.nav-items {
+    justify-content: start;
+    align-items: center;
+}
+
+.nav-items__item {
+    padding: 1.562rem 1.2rem;
+    
+}
+
+.nav-items__item:hover {
+    background-color: rgb(33, 47, 73); 
+}
+
+.nav-items__item:hover h3 {
     color: whitesmoke;
 }
 
 /* Header and Info layout with grid and flexbox */
 
-div.header-text, div.info, div.sidebar {
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-}
-
-div.header-content {
+.header-content, .header-text {
     justify-content: center;
 }
 
-div.header-text {
-    justify-content: center;
+.header-text {
     font-weight: 300;
     line-height: 1.2;
 }
 
-div.cta-container {
+.header-content, .media-container--blue {
+    background-color: rgb(33, 47, 73);
+}
+
+.cta-container {
     padding: 1rem 0.5rem;
     width: 85%;
     background-color: whitesmoke;
@@ -84,36 +98,29 @@ div.cta-container {
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
 }
 
-div.cta-container p.one-liner {
+.cta-container__text {
     margin-bottom: 1.5rem;
     color: rgb(33, 47, 73);
     line-height: 1.4;
 }
 
-div.cta-container  a div.cta-blue {
-    background-color:rgb(26, 38, 59);
+.cta-container__button {
     width: max-content;
     padding: 0.7rem 3rem;
     border-radius: 3px;
-    box-shadow: 0 6px 6px -6px rgb(26, 38, 59);
-}
-
-a div.cta-blue p {
+    background-color:rgb(26, 38, 59);
     color: whitesmoke;
     opacity: initial;
+    box-shadow: 0 6px 6px -6px rgb(26, 38, 59);
     text-transform: uppercase;
-    letter-spacing: 0.7px;  
+    letter-spacing: 0.7px; 
 }
 
-a.cta div.cta-blue:hover {
+.cta-container__button:hover {
     background-color:rgb(69, 88, 122);  
 }
 
-div.grid {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    grid-row: auto;
-}
+
 
 div.info-text {
     padding-left: 1.5rem;
@@ -139,10 +146,6 @@ div.info-text h1 {
 .info-main-credit {
     font-size: 0.8rem;
     padding-top: 1.5rem;
-}
-
-div.header-content, div.grid > div.image-container {
-    background-color: rgb(33, 47, 73);
 }
 
 div.header-content {
@@ -216,7 +219,6 @@ div.mobile-courses {
 div.desktop-courses, div.thesis {
     width: 100%;
     background-color: rgb(33, 47, 73);    
-    flex-direction: column;
     align-items: center;
     padding-bottom: 4rem;
     font-family: 'Roboto', sans-serif;
@@ -246,9 +248,9 @@ div.courses-grid {
     background-color: rgb(33, 47, 73);    
 }
 
-div.courses-grid > div.flex {
-    flex-direction: column;
+.courses-grid__course {
     background-color: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
 }
 
 div.course-text {
@@ -273,11 +275,6 @@ div.courses-grid:hover > div {
 div.courses-grid:hover > div:hover {
     opacity: 1;
 }
-
-div.shadow {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-}
-
 
 /* Thesis layout with flex and grid */ 
 /* div.thesis flex rules already defined in Courses section */
@@ -334,28 +331,29 @@ footer div a:hover {
     opacity: 0.5;
 }
 
-/* Desktop Images and Video */
+/* Desktop media */
 
-div.image-container, div.video-container {
+.media-container {
     overflow: hidden;
+    padding: 2rem 1.5rem;
     
 }
 
-img.image-shadow {
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
-    
+.media-container--no-padding {
+    padding: 0;
 }
 
-div.image-container img, div.video-container video {
+.media-container__img, .media-container__vid {
     max-width: 100%;
     height: auto;
     display: block;
 }
 
- div.grid > div.image-container, div.info > div.image-container, div.video-container {
-    padding: 2rem 1.5rem;
- }
- 
+.media-container__image--shadow {
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.5);
+    
+}
+
 picture.sidebar-image {
     width: 35%;
     overflow: hidden;
@@ -371,7 +369,7 @@ picture.sidebar-image img {
 
 @media only screen and (max-width: 600px) {
 
-    div.desktop, div.desktop-courses, nav.desktop {
+    .nav-desktop, .desktop, .desktop-courses {
         display: none;
     }
 
@@ -379,14 +377,14 @@ picture.sidebar-image img {
         grid-template-columns: 1fr;
     }
 
-    nav.mobile {
+    .nav-mobile {
         display: flex;
         justify-content: space-around;
         align-items: center;
         height: 4rem;
     }
 
-    nav.mobile a:hover {
+    .nav-mobile__item:hover {
         opacity: 0.5;
     }
 
@@ -454,7 +452,7 @@ picture.sidebar-image img {
         padding: 1.5rem 0;
     }
 
-    div.grid > div.image-container, div.video-container {
+    .media-container {
         padding: 0rem;
     }
 
