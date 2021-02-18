@@ -40,15 +40,15 @@
     </nav>  
     <div class="grid">
   
-    <div class="media-container media-container--blue">
-      <img class="media-container__img media-container__image--shadow image-shadow" 
-      src="./resources/images/banner.jpg" alt="Students working at picnic table">
-    </div>
-    <div class="header-content flex">
+        <div class="media-container media-container--blue">
+            <img class="media-container__img media-container__image--shadow image-shadow" 
+            src="./resources/images/banner.jpg" alt="Students working at picnic table">
+        </div>
         <div class="header-text flex column">
             <h1 class="section-title">Learn something new everyday.</h1>
             <div class="cta-container">
-                <p class="cta-container__text">Explore a variety of courses, build your skill set and prepare to enter the workforce: all this and more at Colmar Academy.</p>
+                <p class="cta-container__text">Explore a variety of courses, build your skill set and prepare to enter the workforce.</p>
+                <p class="cta-container__text cta-container__text--no-padding">All this and more at Colmar Academy.</p>
                 <a href="#courses">
                     <div class="cta-container__button">
                         <p>Start here</p>  
@@ -56,29 +56,27 @@
                 </a>
             </div>
         </div>
-    </div>
-
-    <div class="info flex column desktop">
-        <div class="media-container">
-            <img class="media-container__img"
+        <div class="info flex column desktop">
+            <div class="media-container">
+                <img class="media-container__img"
             src="./resources/images/information-main.jpg" alt="Man reading book">
+            </div>
+            <div class="info-text">
+                <h1 class="info-text__h1">Practice makes progress.</h1>
+                <p class="info-text__quote">"Cement your new-found knowledge with repitition, and you will always be ahead of the competition"</p>
+                <p class="info-text__credit">Emanuel, Sr Strategist at Hiring.com </p>
+            </div>
         </div>
-        <div class="info-text">
-            <h1>Practice makes progress.</h1>
-            <p class="info-main-quote">"Cement your new-found knowledge with repitition, and you will always be ahead of the competition"</p>
-            <p class="info-main-credit">Emanuel, Sr Strategist at Hiring.com </p>
-        </div>
-    </div>
-    <div class="sidebar flex column">                
+        <div class="sidebar flex column">                
                 <div class="orientation flex">
                     <picture class="sidebar-image">
                         <source srcset="./resources/images/information-orientation.jpg" media="(min-width: 600px)">
                         <img src="./resources/images/information-orientation-mobile.jpg" alt="Students walking on footpath">
                     </picture>
                     <div class="sidebar-text">
-                        <h2>Orientation date</h2>
-                        <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-                        <a href="#" class="read-more"><p>Read more</p></a>
+                        <h2 class="sidebar-text__h2">Orientation date</h2>
+                        <p class="sidebar-text__p">Tue 10/11 & Wed 10/12: 8am-3pm</p>
+                        <a href="#" class="sidebar-text__read-more"><p>Read more</p></a>
                     </div>
                 </div>
                 <div class="campus flex">
@@ -87,9 +85,9 @@
                         <img src="./resources/images/information-campus-mobile.jpg" alt="Students on campus">
                     </picture>
                     <div class="sidebar-text">
-                        <h2>Our campus</h2>
-                        <p>Find which campus is close to you</p>
-                        <a href="#" class="read-more"><p>Read more</p></a>
+                        <h2 class="sidebar-text__h2">Our campus</h2>
+                        <p class="sidebar-text__p">Find which campus is close to you</p>
+                        <a href="#" class="sidebar-text__read-more"><p>Read more</p></a>
                     </div>
                 </div>
                 <div class="lecture flex">
@@ -98,15 +96,15 @@
                         <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="Guest lecturer">
                     </picture>
                     <div class="sidebar-text">
-                        <h2>Special guest lecture</h2>
-                        <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-                        <a href="#" class="read-more"><p>Read more</p></a>
+                        <h2 class="sidebar-text__h2">Special guest lecture</h2>
+                        <p class="sidebar-text__p"> Join a keynote with Oliver Sack about music in medical treatment</p>
+                        <a href="#" class="sidebar-text__read-more"><p>Read more</p></a>
                     </div>
                 </div>
-    </div>
+        </div>
     </div>
 
-    <div class="mobile-courses" id="courses">
+    <div class="mobile-courses flex column" id="courses">
             <h1 class="section-title">Start learning</h1>
             <a class="course-name"><h3>Software engineering</h3></a>
             <a class="course-name"><h3>Computer art</h3></a>
@@ -125,9 +123,9 @@
                     src="./resources/images/course-software.jpg" alt="mac computer screens">
                 </div>
                 <div class="course-text">
-                    <a class="course-name"><h3>Software engineering</h3></a>
-                    <h4>courses</h4>
-                    <h5>Web Development, Mobile Development, iOT, APIs</h5>
+                    <a><h3 class="course-text__name">Software engineering</h3></a>
+                    <h4 class="course-text__courses">courses</h4>
+                    <h5 class="course-text__dis">Web Development, Mobile Development, iOT, APIs</h5>
                 </div>
             </div>
             <div class="courses-grid__course flex column">
@@ -136,9 +134,9 @@
                     src="./resources/images/course-computer-art.jpg" alt="Looking at iphone screen">
                 </div>
                 <div class="course-text">
-                    <a class="course-name"><h3>Computer Art</h3></a>
-                    <h4>courses</h4>
-                    <h5>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</h5>
+                    <a><h3 class="course-text__name">Computer Art</h3></a>
+                    <h4 class="course-text__courses">courses</h4>
+                    <h5 class="course-text__dis">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</h5>
                 </div>
             </div>
             <div class="courses-grid__course flex column">
@@ -147,9 +145,9 @@
                     src="./resources/images/course-design.jpg" alt="Person holding camera">
                 </div>
                 <div class="course-text">
-                    <a class="course-name"><h3>Design</h3></a>
-                    <h4>courses</h4>
-                    <h5>User Experience Design, User Research, Visual Design</h5>
+                    <a><h3 class="course-text__name">Design</h3></a>
+                    <h4 class="course-text__courses">courses</h4>
+                    <h5 class="course-text__dis">User Experience Design, User Research, Visual Design</h5>
                 </div>
             </div>
             <div class="courses-grid__course flex column">
@@ -158,9 +156,9 @@
                     src="./resources/images/course-data.jpg" alt="Computer screen showing analytics">
                 </div>
                 <div class="course-text">
-                    <a class="course-name"><h3>Data</h3></a>
-                    <h4>courses</h4>
-                    <h5>Data Science, Big Data, SQL, Data Visualization</h5>
+                    <a><h3 class="course-text__name">Data</h3></a>
+                    <h4 class="course-text__courses">courses</h4>
+                    <h5 class="course-text__dis">Data Science, Big Data, SQL, Data Visualization</h5>
                 </div>
             </div>
             <div class="courses-grid__course flex column">
@@ -169,9 +167,9 @@
                     src="./resources/images/course-business.jpg" alt="Chess board">
                 </div>
                 <div class="course-text">
-                    <a class="course-name"><h3>Business</h3></a>
-                    <h4>courses</h4>
-                    <h5>Product Development, Business Development, Startup</h5>
+                    <a><h3 class="course-text__name">Business</h3></a>
+                    <h4 class="course-text__courses">courses</h4>
+                    <h5 class="course-text__dis">Product Development, Business Development, Startup</h5>
                 </div>
             </div>
             <div class="courses-grid__course flex column">
@@ -180,9 +178,9 @@
                     src="./resources/images/course-marketing.jpg" alt="Apple watch on man's wrist">
                 </div>
                 <div class="course-text">
-                    <a class="course-name"><h3>Marketing</h3></a>
-                    <h4>courses</h4>
-                    <h5>Analytics, Content Marketing, Mobile Marketing</h5>
+                    <a><h3 class="course-text__name">Marketing</h3></a>
+                    <h4 class="course-text__courses">courses</h4>
+                    <h5 class="course-text__dis">Analytics, Content Marketing, Mobile Marketing</h5>
                 </div>
             </div>
 
@@ -190,13 +188,13 @@
     </div>
 
     <div class="thesis flex column">
-        <h1 class="section-title blue">Thesis Exhibits</h1>
+        <h1 class="section-title section-title--blue">Thesis Exhibits</h1>
         <div class="grid">
             <div class="media-container">
                 <video class="media-container__vid"
                 controls src="./resources/videos/thesis.mp4" type="video/mp4"></video>
             </div>
-            <div class="sidebar flex column no-border desktop">
+            <div class="sidebar sidebar--no-border flex column desktop">
                 <div class="article-1 flex">
                         <picture class="sidebar-image">
                             <img src="./resources/images/thesis-fisma.jpg" alt="Hand sketching with marker">
@@ -219,7 +217,7 @@
             </div>
             <div class="info-text desktop">
                 <h1>Reimagine Urban</h1>
-                <p class="info-main-quote thesis-quote">
+                <p class="info-text__quote info-text__quote--thesis-quote">
                     "Curabitur vitae libero in ipsum porttitor consequat. 
                     Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. 
                     Phasellus sed consequat ex. Etiam eget manga laoreet, efficitur dolor consequat, tristique ligula."
@@ -229,9 +227,9 @@
 
     </div> 
 
-    <footer class="flex">
-        <p>© Colmar Academy. All rights reserved</p>
-        <div>
+    <footer class="footer flex">
+        <p class="footer__copyright">© Colmar Academy. All rights reserved</p>
+        <div class="footer-terms">
             <a href="#">Terms</a>
             <a href="#">Privacy</a>
         </div>
